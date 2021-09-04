@@ -24,9 +24,9 @@ class _HomeState extends State<Home> {
         title: Center(
             child: (Text(
           'U HUB',
-          style: TextStyle(fontSize: height * 0.04, color: HexColor('#0e5f3f')),
+          style: TextStyle(fontSize: height * 0.04, color: HexColor('#ffffff')),
         ))),
-        backgroundColor: HexColor('#daae00'),
+        backgroundColor: HexColor('#2a6f97'),
       ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
@@ -38,11 +38,13 @@ class _HomeState extends State<Home> {
             label: ('Home'),
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.filter_alt_rounded),
-            label: ('Filter'),
+            icon: Icon(Icons.search_sharp),
+            label: ('Discover'),
           ),
           new BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: ('Profile'))
+            icon: Icon(Icons.person),
+            label: ('Profile'),
+          ),
         ],
       ),
     );

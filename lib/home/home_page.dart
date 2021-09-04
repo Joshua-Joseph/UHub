@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+        backgroundColor: HexColor('#ffffff'),
         body: Padding(
             padding: EdgeInsets.all(height * 0.02),
             child: SingleChildScrollView(
@@ -58,12 +59,13 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(height: height * 0.04),
                   Text('Hello User',
                       style: TextStyle(
                           color: Colors.black, fontSize: height * 0.08)),
                   SizedBox(height: height * 0.04),
                   Text('Showing contents for $stream'),
-                  SizedBox(height: height * 0.04),
+                  SizedBox(height: height * 0.06),
                   Center(
                     child: Card(
                       child: InkWell(
@@ -73,19 +75,21 @@ class _HomePageState extends State<HomePage> {
                               height: height * 0.12,
                               width: width,
                               decoration: BoxDecoration(
-                                  color: HexColor('#ffffff'),
+                                  color: HexColor('#daae00'),
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
                                         blurRadius: 4,
                                         offset: Offset(0, 15),
                                         color:
-                                            HexColor('#ffc6ff').withOpacity(.6),
+                                            HexColor('#0e5f3f').withOpacity(.6),
                                         spreadRadius: -8)
                                   ]),
                               child: Center(
                                 child: Text(text1,
-                                    style: TextStyle(fontSize: height * 0.03)),
+                                    style: TextStyle(
+                                        fontSize: height * 0.03,
+                                        color: HexColor('#ffffff'))),
                               ))),
                     ),
                   ),
@@ -99,19 +103,21 @@ class _HomePageState extends State<HomePage> {
                               height: height * 0.12,
                               width: width,
                               decoration: BoxDecoration(
-                                  color: HexColor('#ffc6ff'),
+                                  color: HexColor('#daae00'),
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
                                         blurRadius: 4,
                                         offset: Offset(0, 15),
                                         color:
-                                            HexColor('#bdb2ff').withOpacity(.6),
+                                            HexColor('#0e5f3f').withOpacity(.6),
                                         spreadRadius: -8)
                                   ]),
                               child: Center(
                                 child: Text(text2,
-                                    style: TextStyle(fontSize: height * 0.03)),
+                                    style: TextStyle(
+                                        fontSize: height * 0.03,
+                                        color: HexColor('#ffffff'))),
                               ))),
                     ),
                   )
