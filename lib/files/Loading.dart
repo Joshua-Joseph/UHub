@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uhubs/files/signingmail.dart';
+import 'package:uhubs/files/signinphone.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class Loading extends StatelessWidget {
   // This widget is the root of your application.
@@ -130,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 25,
+                                    height: 50,
                                   ),
                                   Center(
                                     child: Text(
@@ -142,55 +145,35 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 25,
+                                    height: 60,
                                   ),
+
+
                                   Center(
-                                    child: TextField(
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        hintText: 'USER ID',
-                                        hintStyle: TextStyle(color: Colors.black26),
-                                        // filled: true,
-                                        // fillColor:
-                                        enabledBorder: OutlineInputBorder(
-                                          borderRadius:
-                                          BorderRadius.all(Radius.circular(12.0)),
-                                          borderSide:
-                                          BorderSide(color: Colors.green, width: 2),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderRadius:
-                                          BorderRadius.all(Radius.circular(10.0)),
-                                          borderSide: BorderSide(color: Colors.green),
-                                        ),
-                                      ),
-                                    ),
+                                child:SignInButtonBuilder(
+                                  text: 'SIGN IN WITH EMAIL',
+                                  icon: Icons.email,
+                                  onPressed: () {
+                                    Navigator.push(context,
+                                        new MaterialPageRoute(builder: (context) => signingmail()));
+                                  },
+                                  backgroundColor: Colors.blueGrey[700]!,
+                                )
                                   ),
                                   SizedBox(
-                                    height: 25,
+                                    height: 60,
                                   ),
                                   Center(
-                                    child: TextField(
-                                      obscureText: true,
-                                      decoration: InputDecoration(
-                                        hintText: 'PASSWORD',
-                                        hintStyle: TextStyle(color: Colors.black26),
-                                        // filled: true,
-                                        // fillColor:
-                                        enabledBorder: OutlineInputBorder(
-                                          borderRadius:
-                                          BorderRadius.all(Radius.circular(10.0)),
-                                          borderSide:
-                                          BorderSide(color: Colors.green, width: 2),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderRadius:
-                                          BorderRadius.all(Radius.circular(10.0)),
-                                          borderSide: BorderSide(color: Colors.green),
-                                        ),
-                                      ),
+                                    child:ElevatedButton.icon(
+                                      icon: Icon(Icons.call),
+                                      label: Text('SIGN IN WITH PHONE      '),
+                                      onPressed: () {
+                                        Navigator.push(context,
+                                            new MaterialPageRoute(builder: (context) => signinphone()));
+                                      },
                                     ),
                                   ),
+
                                 ],
                               ),
                             ),
