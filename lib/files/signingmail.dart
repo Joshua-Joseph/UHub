@@ -6,6 +6,7 @@ class signingmail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width =MediaQuery.of(context).size.width;
     return Scaffold(
         body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 40.0),
@@ -19,7 +20,7 @@ class signingmail extends StatelessWidget {
         child: CircleAvatar(
           backgroundImage:
           AssetImage('assets/images/uhub.jpeg'),
-          radius: 80.0,
+          radius: 100.0,
         ),
       ),
       SizedBox(
@@ -29,13 +30,14 @@ class signingmail extends StatelessWidget {
       child: Text(
         'SIGN IN WITH GMAIL',
         style: TextStyle(
+
             fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
             fontSize: 30.0),
       ),
     ),
       SizedBox(
-        height: 50.0,
+        height: 110.0,
       ),
     Center(
 
@@ -43,7 +45,9 @@ class signingmail extends StatelessWidget {
     obscureText: false,
     decoration: InputDecoration(
     hintText: 'GMAIL',
-    hintStyle: TextStyle(color: Colors.black26),
+
+    hintStyle: TextStyle(color: Colors.black26,
+    ),
     // filled: true,
     // fillColor:
     enabledBorder: OutlineInputBorder(

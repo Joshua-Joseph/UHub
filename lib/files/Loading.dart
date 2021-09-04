@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uhubs/files/signingmail.dart';
+import 'package:uhubs/files/signinphone.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 25,
+                                    height: 50,
                                   ),
                                   Center(
                                     child: Text(
@@ -144,13 +145,13 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 35,
+                                    height: 60,
                                   ),
 
 
                                   Center(
                                 child:SignInButtonBuilder(
-                                  text: 'Sign in with Email',
+                                  text: 'SIGN IN WITH EMAIL',
                                   icon: Icons.email,
                                   onPressed: () {
                                     Navigator.push(context,
@@ -160,7 +161,17 @@ class _HomePageState extends State<HomePage> {
                                 )
                                   ),
                                   SizedBox(
-                                    height: 35,
+                                    height: 60,
+                                  ),
+                                  Center(
+                                    child:ElevatedButton.icon(
+                                      icon: Icon(Icons.call),
+                                      label: Text('SIGN IN WITH PHONE      '),
+                                      onPressed: () {
+                                        Navigator.push(context,
+                                            new MaterialPageRoute(builder: (context) => signinphone()));
+                                      },
+                                    ),
                                   ),
 
                                 ],
