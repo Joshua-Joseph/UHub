@@ -1,16 +1,12 @@
 # uhub
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+We built this app in order to bring all the free educational resources available in the internet under one roof.
 
-A few resources to get you started if this is your first Flutter project:
+The user can sign up and create an accout. He/She can view the free resources available for him/her according to the stream he/she has selected. Some other free resources are also provided which are very helpful for studies. 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The signin feature was implemented through SAWO labs.
+We used Firebase Database to store data of the users.
