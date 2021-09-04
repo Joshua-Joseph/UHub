@@ -1,9 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:uhubs/files/Loading.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:sawo/sawo.dart';
 
-class signinphone extends StatelessWidget {
-  const signinphone({Key? key}) : super(key: key);
+class SignInPhone extends StatefulWidget {
+  @override
+  _SignInPhoneState createState() => _SignInPhoneState();
+}
+
+class _SignInPhoneState extends State<SignInPhone> {
+  Sawo sawo = new Sawo(
+    apiKey: "b2149d9f-7378-435e-a31c-98c4551aa09e",
+    secretKey: "613330e978546627b1375df2ZIadSrMafdPrd4O1sk2R6Vhd",
+  );
+
+  // user payload
+  String user = "";
+
+  void payloadCallback(context, payload) {
+    if (payload == null || (payload is String && payload.length == 0)) {
+      payload = "Login Failed :(";
+    }
+    setState(() {
+      user = payload;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +86,13 @@ class signinphone extends StatelessWidget {
                     ),
                     color: Colors.black54,
                     textColor: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      sawo.signIn(
+                        context: context,
+                        identifierType: 'email',
+                        callback: payloadCallback,
+                      );
+                    },
                   ),
                 ),
               ],

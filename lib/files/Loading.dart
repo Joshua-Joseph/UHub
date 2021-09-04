@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         new MaterialPageRoute(
                                             builder: (context) =>
-                                                signinphone()));
+                                                SignInPhone()));
                                   },
                                 ),
                               ),
